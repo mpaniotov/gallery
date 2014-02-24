@@ -1,4 +1,22 @@
-Galery::Application.routes.draw do
+Gallery::Application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+
+  root :to => 'pictures#index'
+  match '/categories/:name/:picture_id'=> 'comments#create',to: :show,as: "picture_comments",via: :post
+  get '/categories/:name/:picture_id'=> 'pictures#show',to: :show, as: "pict"
+
+  resources :categories, :only => [:index, :show] do
+    resources :pictures
+  end
+  resources :likes
+  resources :actions, :only=>[:index]
+
+  resource :actions, :path => "/actions/:user_id/:action_type", :only => [:index, :show],as: 'actions_show'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

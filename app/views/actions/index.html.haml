@@ -1,0 +1,29 @@
+%table{:border=>1}
+  %tr
+    %th
+      Username
+    %th
+      Navigation
+    %th
+      User sign in
+    %th
+      User sign out
+    %th
+      Likes
+    %th
+      Comments
+  %tr
+    - @users_all.each do |user|
+      %tr
+        %td
+          = user.username
+          %td
+            = link_to 'navigation', actions_show_path(user.id, 'navigation')
+            %td
+              = link_to 'user sign in', actions_show_path(user.id, 'user_sign_in')
+            %td
+              = link_to 'user sign out', actions_show_path(user.id, 'user_sign_out')
+            %td
+              = link_to 'likes', actions_show_path(user.id, 'user_likes')
+            %td
+              = link_to 'comments', actions_show_path(user.id, 'user_comments')

@@ -1,0 +1,30 @@
+.big_picture
+  .container
+    %br
+    - if @like_for_chosen_picture.nil? then
+      = image_tag @picture.photo.url
+      %br
+      = link_to 'Like', new_like_path(:id=>@picture.id,:like_created=>true)
+    - else
+      .like
+        =(image_tag @picture.photo.url)
+      = link_to 'Dislike', new_like_path(:id => @picture.id,:like_deleted => true)
+    = "#{Picture.find(@picture.id).likes_count} "
+    .nav-collapse
+      .span11
+        %ul.nav
+          - @picture.comments.each do |comment|
+            %li.comment
+              .title
+                = "#{User.find(comment.user_id).username}: "
+              .text
+                = comment.text
+              .time
+                = time_ago_in_words comment.created_at
+                ago
+%br
+= form_for :comment, url: picture_comments_path(:picture_id=>@picture.id) do |form|
+  = form.label 'Your comment here'
+  = form.text_area :text, :cols => 24, :rows => 10,:width=>450
+  %br
+    = form.submit 'Post comment'

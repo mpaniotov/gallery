@@ -3,8 +3,21 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use postgresql as the database for Active Record
+gem 'pg'
+gem 'devise'
+gem 'haml-rails'
+gem 'activerecord-reset-pk-sequence'
+#gem 'spud_photos'
+gem 'paperclip'
+gem 'fog'
+gem 'kaminari'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
+gem 'omniauth-facebook'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

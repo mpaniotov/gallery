@@ -1,0 +1,38 @@
+%html
+  %head
+    %title Hamlapp
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
+    = csrf_meta_tag
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .nav-collapse
+            %ul.nav
+              %li.home
+                - if user_signed_in?
+                  = link_to 'Home', root_path
+                  %li
+                    = link_to 'History', actions_path
+                    - @category_all.each do |curr_category|
+                      %li
+                        = link_to curr_category.name, category_path(curr_category.name)
+              %li.sign
+                - if user_signed_in?
+                  = current_user.email
+                  %li
+                    = link_to 'Sign out', destroy_user_session_path, :method => :delete
+                - else
+                  = link_to 'Sign in', new_user_session_path
+                  %li
+                    = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
+                  %li
+                    = link_to 'Sign up', new_user_registration_path
+  .container
+    .nav-collapse
+      .span11
+        %ul.nav
+          %li
+            = yield
+
