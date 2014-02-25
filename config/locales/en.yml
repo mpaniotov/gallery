@@ -29,3 +29,9 @@ en:
       next: "Next &gt;"
       truncate: "..."
 
+  simple_captcha:
+    placeholder: "Enter the image value"
+    label: "Enter the code in the box:"
+    message:
+      default: "Secret Code did not match with the Image"
+      user: "The secret Image and code were different"

@@ -9,14 +9,14 @@
       .like
         =(image_tag @picture.photo.url)
       = link_to 'Dislike', new_like_path(:id => @picture.id,:like_deleted => true)
-    = "#{Picture.find(@picture.id).likes_count} "
+    = @likes_count
     .nav-collapse
       .span11
         %ul.nav
-          - @picture.comments.each do |comment|
-            %li.comment
+          - @picture.comments.each_with_index do |comment,index|
+            %li.comment{:id=>"#{comment.id}"}
               .title
-                = "#{User.find(comment.user_id).username}: "
+                = @comments_authors[index]
               .text
                 = comment.text
               .time
@@ -27,4 +27,6 @@
   = form.label 'Your comment here'
   = form.text_area :text, :cols => 24, :rows => 10,:width=>450
   %br
+    = show_simple_captcha
     = form.submit 'Post comment'
+= render 'scrollTo'

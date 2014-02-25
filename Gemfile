@@ -17,6 +17,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 gem 'omniauth-facebook'
+gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+gem 'jquery-scrollto-rails'
 
 
 # Use SCSS for stylesheets

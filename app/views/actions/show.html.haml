@@ -1,4 +1,16 @@
-%ul
+%ol
   - @user_nav.each do |user|
     %li
-      = user.navigation
+      = user.data[:description]
+      - if user.action_type=='user_sign_in'
+        = user.data[:login_time]
+      - if user.action_type=='user_sign_out'
+        = user.data[:logout_time]
+      - if user.action_type=='comments'
+        = user.data[:comment_id]
+        %br
+          = link_to user.data[:url],user.data[:url]+"#"+user.data[:comment_id].to_s
+      - elsif user.action_type=='navigation' or user.action_type=='likes'
+        = user.data[:picture_id]
+        %br
+          = link_to user.data[:url],user.data[:url]

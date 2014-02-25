@@ -15,9 +15,9 @@ class ActionsController < ApplicationController
             @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
         when 'user_sign_out'
           @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
-        when 'user_likes'
+        when 'likes'
           @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
-        when 'user_comments'
+        when 'comments'
           @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
     end
 

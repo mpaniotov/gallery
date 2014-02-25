@@ -1,5 +1,6 @@
 %html
   %head
+    %script
     %title Hamlapp
     = stylesheet_link_tag :application
     = javascript_include_tag :application
@@ -20,7 +21,8 @@
                         = link_to curr_category.name, category_path(curr_category.name)
               %li.sign
                 - if user_signed_in?
-                  = current_user.email
+                  .email
+                    = current_user.email
                   %li
                     = link_to 'Sign out', destroy_user_session_path, :method => :delete
                 - else
@@ -30,6 +32,7 @@
                   %li
                     = link_to 'Sign up', new_user_registration_path
   .container
+    %script
     .nav-collapse
       .span11
         %ul.nav
