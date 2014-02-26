@@ -19,7 +19,7 @@ gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 gem 'omniauth-facebook'
 gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
 gem 'jquery-scrollto-rails'
-
+gem 'puma'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

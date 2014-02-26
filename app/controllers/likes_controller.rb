@@ -9,7 +9,7 @@ class LikesController < ApplicationController
       else
         @like = Like.create(:user_id => current_user.id,:picture_id => @picture.id)
         Picture.increment_counter(:likes_count, @picture.id)
-        Action.create(:user_id=>current_user.id, :action_type=>"likes", :data => {:url=>request.referrer,:picture_id=>@picture.id,:description=>'Left like for picture'})
+        Action.create(:user_id=>current_user.id, :action_type=>"likes", :data => {:url=>request.referrer,:id=>@picture.id,:description=>'Left like for picture',:time=>Time.zone.now})
       end
     redirect_to pict_path(:picture_id=>@picture.id,:name=>@category.name,:redirect=>true)
   end

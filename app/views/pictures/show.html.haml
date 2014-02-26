@@ -9,14 +9,14 @@
       .like
         =(image_tag @picture.photo.url)
       = link_to 'Dislike', new_like_path(:id => @picture.id,:like_deleted => true)
-    = @likes_count
+    = @picture.likes_count
     .nav-collapse
       .span11
         %ul.nav
           - @picture.comments.each_with_index do |comment,index|
             %li.comment{:id=>"#{comment.id}"}
               .title
-                = @comments_authors[index]
+                = comment.user.username
               .text
                 = comment.text
               .time

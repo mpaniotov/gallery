@@ -7,20 +7,36 @@ class ActionsController < ApplicationController
 
   def show
     @category_all=Category.all
-    user_id = params[:user_id].to_i
+    @user_id = params[:user_id].to_i
     case params[:action_type]
         when 'navigation'
-            @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
+          action_info
         when 'user_sign_in'
-            @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
+          action_info
         when 'user_sign_out'
-          @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
+          action_info
         when 'likes'
-          @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
+          action_info
         when 'comments'
-          @user_nav=Action.where(:user_id=>user_id,:action_type=>params[:action_type])
+          action_info
     end
 
+  end
+
+  private
+  def action_info
+    @all=[]
+    @action=[]
+    @object_id=[]
+    @url=[]
+    @time=[]
+    @user_nav=Action.where(:user_id=>@user_id,:action_type=>params[:action_type])
+    @user_nav.each do |current_action|
+      @action<<current_action.data[:description]
+      @object_id<<current_action.data[:id]
+      @url<<current_action.data[:url]
+      @time<<current_action.data[:time]
+    end
   end
 
 

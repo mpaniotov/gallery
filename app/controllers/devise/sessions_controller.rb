@@ -13,7 +13,7 @@ class Devise::SessionsController < DeviseController
 
   # POST /resource/sign_in
   def create
-    Action.create(:user_id=>current_user.id, :action_type=>"user_sign_in", :data => {:login_time=>Time.now,:description=>'Sign in at '})
+    Action.create(:user_id=>current_user.id, :action_type=>"user_sign_in", :data => {:login_time=>Time.now,:description=>'Sign in',:id=>' ',:url=>' '})
     self.resource = warden.authenticate!(auth_options)
     set_flash_message(:notice, :signed_in) if is_flashing_format?
     sign_in(resource_name, resource)
@@ -23,7 +23,7 @@ class Devise::SessionsController < DeviseController
 
   # DELETE /resource/sign_out
   def destroy
-    Action.create(:user_id=>current_user.id, :action_type=>"user_sign_out", :data => {:logout_time=>Time.now,:description=>'Sign out at '})
+    Action.create(:user_id=>current_user.id, :action_type=>"user_sign_out", :data => {:logout_time=>Time.now,:description=>'Sign out',:id=>' ',:url=>' '})
     redirect_path = after_sign_out_path_for(resource_name)
     signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
     set_flash_message :notice, :signed_out if signed_out && is_flashing_format?
