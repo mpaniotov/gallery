@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @picture = Picture.where(:id => params[:picture_id]).first!
-    @category =Category.find(@picture.category_id)
+    @category = Category.find(@picture.category_id)
     @comment = @picture.comments.build(comment_params.merge(:user => current_user, :picture => @picture))
     if simple_captcha_valid?
       @comment.save

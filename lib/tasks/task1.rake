@@ -1,34 +1,37 @@
-task :img =>:environment do
-  Category.delete_all
-  Category.reset_pk_sequence
- Picture.delete_all
-  Picture.reset_pk_sequence
-  root_dir = 'img'
-  categories= []
-  Dir.entries(root_dir).select{|entry| !File.directory? entry}.map{|entry| categories << entry}
- # categories.each {
- #  |category|
-   # categ = Category.new(:name => category)
-   # categ.save
+desc "TODO"
 
- # Dir.entries(root_dir+'/'+category).select{|entry| !File.directory? entry}.map{|entry| images << File.join(root_dir,category,entry)}
- # }
-  categories.each {
-      |category|
-    categ = Category.new(:name =>category)
-    categ.save
-    Dir.entries(root_dir+'/'+category).select {|entry| File.file? entry
-    if !(entry == '.' || entry == '..')
-    file = File.open("#{root_dir}/#{category}/#{entry}")
-    pict=Picture.new(:category_id=>categ.id, :path=>File.join(root_dir,category,entry),:photo=>file)
-    #puts "I = #{i}"
-    pict.save
-    end
-    }
-  }
+task upload_img: :environment do
+  pic_dir
 end
 
+def category_create(unit)
+  if Category.find_by :name => unit
+  else
+    Category.create(:name => unit)
+  end
+end
 
+def picture_create(img,unit)
+  if !Picture.find_by :name => img
+    file = File.open("#{unit}/#{img}")
+    category=Category.find_by(:name => unit)
+    category.pictures.create(:name=>img,:path=>"img/#{unit}/#{img}", :photo=>file)
+    puts img
+  end
+end
 
-#file = File.open("#{unit}/#{img}")
-#Pick.create(:name => img, :category=>Category.find_by(:name => unit).id, :url=>"img/#{unit}/#{img}", :thumb=>file)
+def pic_dir
+  Dir.chdir("img")
+  target = Dir.new("#{Dir.pwd}")
+  target.entries.each do |unit|
+    if unit!='.' && unit!='..'
+      category_create(unit)
+      pictures=Dir.new(unit)
+      pictures.entries.each do |img|
+        if img!='.' && img!='..'
+          picture_create(img,unit)
+        end
+      end
+    end
+  end
+end

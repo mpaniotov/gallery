@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140224144343) do
+ActiveRecord::Schema.define(version: 20140227104707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20140224144343) do
   create_table "comments", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
     t.text     "text"
     t.integer  "picture_id"
     t.integer  "user_id"
@@ -56,6 +55,7 @@ ActiveRecord::Schema.define(version: 20140224144343) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "name"
   end
 
   create_table "simple_captcha_data", force: true do |t|
@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 20140224144343) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
-    t.string   "name"
     t.string   "provider"
     t.string   "uid"
   end

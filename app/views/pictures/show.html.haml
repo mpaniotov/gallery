@@ -13,7 +13,7 @@
     .nav-collapse
       .span11
         %ul.nav
-          - @picture.comments.each_with_index do |comment,index|
+          - @comments.each do |comment|
             %li.comment{:id=>"#{comment.id}"}
               .title
                 = comment.user.username
@@ -22,6 +22,7 @@
               .time
                 = time_ago_in_words comment.created_at
                 ago
+
 %br
 = form_for :comment, url: picture_comments_path(:picture_id=>@picture.id) do |form|
   = form.label 'Your comment here'

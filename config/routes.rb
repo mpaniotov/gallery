@@ -1,7 +1,6 @@
 Gallery::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-
   root :to => 'pictures#index'
   match '/categories/:name/:picture_id'=> 'comments#create',to: :show,as: "picture_comments",via: :post
   get '/categories/:name/:picture_id'=> 'pictures#show',to: :show, as: "pict"

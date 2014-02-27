@@ -16,7 +16,7 @@
                   = link_to 'Home', root_path
                   %li
                     = link_to 'History', actions_path
-                    - @category_all.each do |curr_category|
+                    - @categories.each do |curr_category|
                       %li
                         = link_to curr_category.name, category_path(curr_category.name)
               %li.sign
