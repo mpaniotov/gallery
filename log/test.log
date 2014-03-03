@@ -1,0 +1,1452 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.1ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.1ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 980190962)
+  [1m[36mFixture Insert (36.0ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:16:45', '2014-02-27 11:16:45', 298486374)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (2.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:19:15', '2014-02-27 11:19:15', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 980190962)
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:20:46', '2014-02-27 11:20:46', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:16', '2014-02-27 11:21:16', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:17', '2014-02-27 11:21:17', 980190962)
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:17', '2014-02-27 11:21:17', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:17', '2014-02-27 11:21:17', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 980190962)[0m
+  [1m[35mFixture Insert (2.1ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 980190962)
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:21:30', '2014-02-27 11:21:30', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 11:24:17', '2014-02-27 11:24:17', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 980190962)
+  [1m[36mFixture Insert (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:01:22', '2014-02-27 12:01:22', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:04:01', '2014-02-27 12:04:01', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:06:56', '2014-02-27 12:06:56', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 980190962)
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:07:28', '2014-02-27 12:07:28', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:33', '2014-02-27 12:09:33', 298486374)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:09:38', '2014-02-27 12:09:38', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 980190962)
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:10:41', '2014-02-27 12:10:41', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 298486374)
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 980190962)
+  [1m[36mFixture Insert (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 298486374)[0m
+PG::UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "index_users_on_email"
+DETAIL:  Ключ "(email)=()" уже существует.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:22:49', '2014-02-27 12:22:49', 298486374)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:26:50', '2014-02-27 12:26:50', 298486374)
+  [1m[36mFixture Delete (1.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (14.8ms)[0m  INSERT INTO "users" ("name", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:26:50', '2014-02-27 12:26:50', 127326141)
+PG::UndefinedColumn: ОШИБКА:  колонка "name" в таблице "users" не существует
+LINE 1: INSERT INTO "users" ("name", "email", "reset_password_token"...
+                             ^
+: INSERT INTO "users" ("name", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:26:50', '2014-02-27 12:26:50', 127326141)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:27:09', '2014-02-27 12:27:09', 127326141)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:27:09', '2014-02-27 12:27:09', 298486374)[0m
+  [1m[35m (12.1ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------
+UserTest: test_the_truth
+------------------------
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 980190962)
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (1.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:28:51', '2014-02-27 12:28:51', 127326141)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:28:51', '2014-02-27 12:28:51', 298486374)[0m
+  [1m[35m (14.1ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------
+UserTest: test_should_get_index
+-------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:29:28', '2014-02-27 12:29:28', 127326141)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:28', '2014-02-27 12:29:28', 298486374)[0m
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-------------------------------
+UserTest: test_should_get_index
+-------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (2.2ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 298486374)[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 298486374)
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:29:39', '2014-02-27 12:29:39', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:29:39', '2014-02-27 12:29:39', 298486374)[0m
+  [1m[35m (13.9ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------
+UserTest: test_should_get_index
+-------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:31:07', '2014-02-27 12:31:07', 127326141)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:07', '2014-02-27 12:31:07', 298486374)[0m
+  [1m[35m (12.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+Processing by ActionsController#index as HTML
+Completed 500 Internal Server Error in 6ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 298486374)[0m
+  [1m[35mFixture Delete (1.3ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:31:28', '2014-02-27 12:31:28', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:28', '2014-02-27 12:31:28', 298486374)[0m
+  [1m[35m (19.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+Processing by ActionsController#index as HTML
+Completed 500 Internal Server Error in 8ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (1.3ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 298486374)[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 298486374)
+  [1m[36mFixture Delete (4.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.1ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:31:38', '2014-02-27 12:31:38', 127326141)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:38', '2014-02-27 12:31:38', 298486374)[0m
+  [1m[35m (22.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 298486374)
+  [1m[36mFixture Delete (1.4ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:31:58', '2014-02-27 12:31:58', 127326141)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:31:58', '2014-02-27 12:31:58', 298486374)[0m
+  [1m[35m (23.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+Processing by ActionsController#index as HTML
+Completed 500 Internal Server Error in 7ms
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (2.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 980190962)[0m
+  [1m[35mFixture Insert (2.8ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 298486374)[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:32:40', '2014-02-27 12:32:40', 127326141)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:40', '2014-02-27 12:32:40', 298486374)[0m
+  [1m[35m (9.9ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 980190962)[0m
+  [1m[35mFixture Insert (1.2ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.2ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:32:55', '2014-02-27 12:32:55', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:32:55', '2014-02-27 12:32:55', 298486374)[0m
+  [1m[35m (14.4ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+Processing by ActionsController#index as HTML
+  Parameters: {"id"=>"12"}
+Completed 500 Internal Server Error in 6ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (32.4ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (1.1ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:48', '2014-02-27 12:51:48', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (68.4ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:51:49', '2014-02-27 12:51:49', 127326141)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:51:49', '2014-02-27 12:51:49', 298486374)[0m
+  [1m[35m (183.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (1.7ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:52:33', '2014-02-27 12:52:33', 127326141)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:52:33', '2014-02-27 12:52:33', 298486374)[0m
+  [1m[35m (14.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:53:00', '2014-02-27 12:53:00', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:00', '2014-02-27 12:53:00', 298486374)[0m
+  [1m[35m (16.4ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.4ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:53:24', '2014-02-27 12:53:24', 127326141)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:24', '2014-02-27 12:53:24', 298486374)[0m
+  [1m[35m (118.4ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:53:33', '2014-02-27 12:53:33', 127326141)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:53:33', '2014-02-27 12:53:33', 298486374)[0m
+  [1m[35m (18.4ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:13', '2014-02-27 12:54:13', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:13', '2014-02-27 12:54:13', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 298486374)[0m
+  [1m[35mFixture Delete (1.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:54:14', '2014-02-27 12:54:14', 127326141)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:14', '2014-02-27 12:54:14', 298486374)[0m
+  [1m[35m (7.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:54:42', '2014-02-27 12:54:42', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:54:42', '2014-02-27 12:54:42', 298486374)[0m
+  [1m[35m (12.5ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (2.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:55:39', '2014-02-27 12:55:39', 127326141)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:55:39', '2014-02-27 12:55:39', 298486374)[0m
+  [1m[35m (14.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (241.5ms)[0m  [1mDROP DATABASE IF EXISTS "Gallery_test"[0m
+  [1m[35m (1339.7ms)[0m  CREATE DATABASE "Gallery_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.1ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (87.7ms)[0m  CREATE TABLE "actions" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "action_type" character varying(255), "data" text) 
+  [1m[36m (39.5ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [1m[35m (73.3ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "text" text, "picture_id" integer, "user_id" integer) 
+  [1m[36m (38.8ms)[0m  [1mCREATE TABLE "likes" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "picture_id" integer) [0m
+  [1m[35m (76.9ms)[0m  CREATE TABLE "pictures" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "category_id" integer, "path" character varying(255), "likes_count" integer DEFAULT 0, "photo_file_name" character varying(255), "photo_content_type" character varying(255), "photo_file_size" integer, "photo_updated_at" timestamp, "name" character varying(255)) 
+  [1m[36m (39.9ms)[0m  [1mCREATE TABLE "simple_captcha_data" ("id" serial primary key, "key" character varying(40), "value" character varying(6), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (37.4ms)[0m  CREATE INDEX "idx_key" ON "simple_captcha_data" USING btree ("key")
+  [1m[36m (64.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "username" character varying(255), "provider" character varying(255), "uid" character varying(255)) [0m
+  [1m[35m (39.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (41.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (4.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (39.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (6.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227104707')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140220100306')
+  [1m[36m (8.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140220093359')[0m
+  [1m[35m (7.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094311')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219130245')[0m
+  [1m[35m (7.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214153339')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140218100050')[0m
+  [1m[35m (7.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093232')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094139')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094204')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093306')[0m
+  [1m[35m (9.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144342')
+  [1m[36m (6.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214092821')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093313')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140221092400')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224093320')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093554')[0m
+  [1m[35m (7.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093257')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094631')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093833')
+  [1m[36m (7.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219152840')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140221121814')
+  [1m[36m (7.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227093216')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144343')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093250')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.2ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:56:44', '2014-02-27 12:56:44', 127326141)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:56:44', '2014-02-27 12:56:44', 298486374)[0m
+  [1m[35m (11.0ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------
+ActionTest: test_the_truth
+--------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+Processing by ActionsController#index as HTML
+  Parameters: {"id"=>"12"}
+Completed 500 Internal Server Error in 43ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------
+UserTest: test_should_get_index
+-------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (225.1ms)[0m  [1mDROP DATABASE IF EXISTS "Gallery_test"[0m
+  [1m[35m (673.8ms)[0m  CREATE DATABASE "Gallery_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (76.1ms)[0m  CREATE TABLE "actions" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "action_type" character varying(255), "data" text) 
+  [1m[36m (47.4ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [1m[35m (81.5ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "text" text, "picture_id" integer, "user_id" integer) 
+  [1m[36m (39.1ms)[0m  [1mCREATE TABLE "likes" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "picture_id" integer) [0m
+  [1m[35m (110.0ms)[0m  CREATE TABLE "pictures" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "category_id" integer, "path" character varying(255), "likes_count" integer DEFAULT 0, "photo_file_name" character varying(255), "photo_content_type" character varying(255), "photo_file_size" integer, "photo_updated_at" timestamp, "name" character varying(255)) 
+  [1m[36m (39.7ms)[0m  [1mCREATE TABLE "simple_captcha_data" ("id" serial primary key, "key" character varying(40), "value" character varying(6), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (42.4ms)[0m  CREATE INDEX "idx_key" ON "simple_captcha_data" USING btree ("key")
+  [1m[36m (64.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "username" character varying(255), "provider" character varying(255), "uid" character varying(255)) [0m
+  [1m[35m (38.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (41.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (39.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (6.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227104707')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140220100306')
+  [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140220093359')[0m
+  [1m[35m (7.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094311')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219130245')[0m
+  [1m[35m (6.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214153339')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140218100050')[0m
+  [1m[35m (8.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093232')
+  [1m[36m (7.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094139')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094204')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093306')[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144342')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214092821')[0m
+  [1m[35m (8.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093313')
+  [1m[36m (7.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140221092400')[0m
+  [1m[35m (7.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224093320')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093554')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093257')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094631')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093833')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219152840')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140221121814')
+  [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227093216')[0m
+  [1m[35m (7.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144343')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093250')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.3ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 298486374)[0m
+  [1m[35mFixture Delete (1.7ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 298486374)
+  [1m[36mFixture Delete (1.3ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:57:31', '2014-02-27 12:57:31', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:31', '2014-02-27 12:57:31', 298486374)[0m
+  [1m[35m (15.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+--------------------------
+ActionTest: test_the_truth
+--------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+ActionsControllerTest: test_should_get_index
+--------------------------------------------
+Processing by ActionsController#index as HTML
+  Parameters: {"id"=>"12"}
+Completed 500 Internal Server Error in 10ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------
+UserTest: test_the_truth
+------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (228.4ms)[0m  [1mDROP DATABASE IF EXISTS "Gallery_test"[0m
+  [1m[35m (549.0ms)[0m  CREATE DATABASE "Gallery_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (92.6ms)[0m  CREATE TABLE "actions" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "action_type" character varying(255), "data" text) 
+  [1m[36m (39.8ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [1m[35m (80.5ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "text" text, "picture_id" integer, "user_id" integer) 
+  [1m[36m (56.4ms)[0m  [1mCREATE TABLE "likes" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "picture_id" integer) [0m
+  [1m[35m (91.7ms)[0m  CREATE TABLE "pictures" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "category_id" integer, "path" character varying(255), "likes_count" integer DEFAULT 0, "photo_file_name" character varying(255), "photo_content_type" character varying(255), "photo_file_size" integer, "photo_updated_at" timestamp, "name" character varying(255)) 
+  [1m[36m (39.1ms)[0m  [1mCREATE TABLE "simple_captcha_data" ("id" serial primary key, "key" character varying(40), "value" character varying(6), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (37.4ms)[0m  CREATE INDEX "idx_key" ON "simple_captcha_data" USING btree ("key")
+  [1m[36m (72.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "username" character varying(255), "provider" character varying(255), "uid" character varying(255)) [0m
+  [1m[35m (38.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (33.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (30.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (5.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (9.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227104707')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140220100306')
+  [1m[36m (8.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140220093359')[0m
+  [1m[35m (7.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094311')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219130245')[0m
+  [1m[35m (7.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214153339')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140218100050')[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093232')
+  [1m[36m (7.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094139')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094204')
+  [1m[36m (7.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093306')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144342')
+  [1m[36m (7.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214092821')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093313')
+  [1m[36m (7.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140221092400')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224093320')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093554')[0m
+  [1m[35m (7.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093257')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094631')[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093833')
+  [1m[36m (7.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219152840')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140221121814')
+  [1m[36m (7.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227093216')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144343')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093250')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.5ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (1.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (1.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.1ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 12:57:50', '2014-02-27 12:57:50', 127326141)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 12:57:50', '2014-02-27 12:57:50', 298486374)[0m
+  [1m[35m (11.8ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------
+ActionTest: test_the_truth
+--------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------
+UserTest: test_the_truth
+------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36m (222.8ms)[0m  [1mDROP DATABASE IF EXISTS "Gallery_test"[0m
+  [1m[35m (557.2ms)[0m  CREATE DATABASE "Gallery_test" ENCODING = 'unicode'
+  [1m[36mSQL (8.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (139.6ms)[0m  CREATE TABLE "actions" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "action_type" character varying(255), "data" text) 
+  [1m[36m (55.7ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [1m[35m (89.2ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "text" text, "picture_id" integer, "user_id" integer) 
+  [1m[36m (47.7ms)[0m  [1mCREATE TABLE "likes" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "picture_id" integer) [0m
+  [1m[35m (83.1ms)[0m  CREATE TABLE "pictures" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "category_id" integer, "path" character varying(255), "likes_count" integer DEFAULT 0, "photo_file_name" character varying(255), "photo_content_type" character varying(255), "photo_file_size" integer, "photo_updated_at" timestamp, "name" character varying(255)) 
+  [1m[36m (56.2ms)[0m  [1mCREATE TABLE "simple_captcha_data" ("id" serial primary key, "key" character varying(40), "value" character varying(6), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (52.8ms)[0m  CREATE INDEX "idx_key" ON "simple_captcha_data" USING btree ("key")
+  [1m[36m (73.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "username" character varying(255), "provider" character varying(255), "uid" character varying(255)) [0m
+  [1m[35m (37.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (31.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (38.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (5.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227104707')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140220100306')
+  [1m[36m (7.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140220093359')[0m
+  [1m[35m (7.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094311')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219130245')[0m
+  [1m[35m (7.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214153339')
+  [1m[36m (7.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140218100050')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093232')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094139')[0m
+  [1m[35m (7.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094204')
+  [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093306')[0m
+  [1m[35m (7.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144342')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214092821')[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093313')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140221092400')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224093320')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093554')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093257')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094631')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093833')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219152840')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140221121814')
+  [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227093216')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144343')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093250')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.8ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 13:01:23', '2014-02-27 13:01:23', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:23', '2014-02-27 13:01:23', 298486374)[0m
+  [1m[35m (12.6ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------
+ActionTest: test_the_truth
+--------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------
+UserTest: test_the_truth
+------------------------
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (219.6ms)[0m  [1mDROP DATABASE IF EXISTS "Gallery_test"[0m
+  [1m[35m (540.9ms)[0m  CREATE DATABASE "Gallery_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (85.7ms)[0m  CREATE TABLE "actions" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "action_type" character varying(255), "data" text) 
+  [1m[36m (31.5ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [1m[35m (64.5ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "text" text, "picture_id" integer, "user_id" integer) 
+  [1m[36m (38.4ms)[0m  [1mCREATE TABLE "likes" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "user_id" integer, "picture_id" integer) [0m
+  [1m[35m (69.9ms)[0m  CREATE TABLE "pictures" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp, "category_id" integer, "path" character varying(255), "likes_count" integer DEFAULT 0, "photo_file_name" character varying(255), "photo_content_type" character varying(255), "photo_file_size" integer, "photo_updated_at" timestamp, "name" character varying(255)) 
+  [1m[36m (38.9ms)[0m  [1mCREATE TABLE "simple_captcha_data" ("id" serial primary key, "key" character varying(40), "value" character varying(6), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (38.2ms)[0m  CREATE INDEX "idx_key" ON "simple_captcha_data" USING btree ("key")
+  [1m[36m (155.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "username" character varying(255), "provider" character varying(255), "uid" character varying(255)) [0m
+  [1m[35m (38.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (33.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (11.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (38.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (6.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227104707')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140220100306')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140220093359')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094311')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219130245')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214153339')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140218100050')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093232')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094139')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214094204')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093306')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144342')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214092821')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093313')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140221092400')[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224093320')
+  [1m[36m (7.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093554')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093257')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214094631')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140214093833')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219152840')[0m
+  [1m[35m (8.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140221121814')
+  [1m[36m (7.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140227093216')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224144343')
+  [1m[36m (8.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140214093250')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.1ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 298486374)
+  [1m[36mFixture Delete (1.1ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 298486374)[0m
+  [1m[35mFixture Delete (1.3ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 980190962)
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 13:01:40', '2014-02-27 13:01:40', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:40', '2014-02-27 13:01:40', 298486374)[0m
+  [1m[35m (63.8ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+--------------------------
+ActionTest: test_the_truth
+--------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------
+UserTest: test_the_truth
+------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 298486374)[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 980190962)
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 13:01:48', '2014-02-27 13:01:48', 127326141)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:01:48', '2014-02-27 13:01:48', 298486374)[0m
+  [1m[35m (9.8ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 298486374)[0m
+  [1m[35mFixture Delete (1.3ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 13:02:35', '2014-02-27 13:02:35', 127326141)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:02:35', '2014-02-27 13:02:35', 298486374)[0m
+  [1m[35m (232.5ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.3ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 298486374)
+  [1m[36mFixture Delete (2.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 13:03:35', '2014-02-27 13:03:35', 127326141)
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:35', '2014-02-27 13:03:35', 298486374)[0m
+  [1m[35m (21.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "actions" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "likes" DISABLE TRIGGER ALL;ALTER TABLE "pictures" DISABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.6ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "categories" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "likes"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "likes" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 980190962)[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "comments" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "pictures" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "actions"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "actions" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:45', '2014-02-27 13:03:45', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("username", "email", "reset_password_token", "created_at", "updated_at", "id") VALUES ('David Heinemeier Hansson', 'david@mail.ru', 'nil', '2014-02-27 13:03:46', '2014-02-27 13:03:46', 127326141)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2014-02-27 13:03:46', '2014-02-27 13:03:46', 298486374)[0m
+  [1m[35m (15.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "actions" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "likes" ENABLE TRIGGER ALL;ALTER TABLE "pictures" ENABLE TRIGGER ALL;ALTER TABLE "simple_captcha_data" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------
+CommentsControllerTest: test_should_create_post
+-----------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
