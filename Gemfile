@@ -19,6 +19,7 @@ gem 'omniauth-facebook'
 gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
 gem 'jquery-scrollto-rails'
 gem 'puma'
+gem 'aws-sdk'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
