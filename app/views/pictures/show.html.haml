@@ -2,7 +2,7 @@
   .container
     %br
     - if @like_for_chosen_picture.nil? then
-      = image_tag @picture.photo.url(:small)
+      = image_tag @picture.photo.url
       %br
       = link_to 'Like', new_like_path(:id=>@picture.id,:like_created=>true)
     - else
