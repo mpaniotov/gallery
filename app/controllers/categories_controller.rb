@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
     @picture = Picture.all
     @category = Category.where(:name => params[:id]).first!
     @category_pictures = @category.pictures.order(likes_count: :desc).page(params[:page]).per(5)
-    Action.create(:user_id=>current_user.id, :action_type=>"navigation", :data => {:url=>request.original_url,:id=>@category.name,:description=>'Watch category',:time=>Time.zone.now})
+    Action.create(:user_id=>current_user.id, :action_type=>"navigation", :data => {:url=>request.original_url,:id=>@category.name,:description=>'Watch category',:time=>Time.now})
   end
 
   private
