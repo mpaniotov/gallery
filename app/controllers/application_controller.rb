@@ -14,4 +14,22 @@ class ApplicationController < ActionController::Base
     @categories = Category.all
   end
 
+  def after_sign_in_path_for(resource)
+    Action.create(:user_id=>current_user.id, :action_type=>"user_sign_in", :data => {:time=>Time.now,:description=>'Sign in',:id=>' ',:url=>' '})
+    if resource.is_a? User
+      categories_path
+    else
+      super
+    end
+  end
+
+  def after_sign_out_path_for(resource)
+    Action.create(:user_id=>current_user.id, :action_type=>"user_sign_out", :data => {:time=>Time.now,:description=>'Sign out',:id=>' ',:url=>' '})
+    if resource.is_a? User
+      categories_path
+    else
+      super
+    end
+  end
+
 end
