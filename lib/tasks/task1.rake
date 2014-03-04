@@ -1,6 +1,8 @@
 desc "TODO"
 
 task upload_img: :environment do
+  Category.reset_pk_sequence
+  Picture.reset_pk_sequence
   pic_dir
 end
 

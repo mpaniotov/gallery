@@ -20,6 +20,7 @@ gem 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
 gem 'jquery-scrollto-rails'
 gem 'puma'
 gem 'aws-sdk'
+gem 'paperclip-dropbox'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

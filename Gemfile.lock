@@ -67,6 +67,8 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dropbox-sdk (1.6.3)
+      json
     erubis (2.7.0)
     excon (0.31.0)
     execjs (2.0.2)
@@ -148,6 +150,9 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paperclip-dropbox (1.2.1)
+      dropbox-sdk (~> 1.3)
+      paperclip (>= 3.1, < 5)
     pg (0.17.1)
     polyglot (0.3.4)
     puma (2.8.0)
@@ -232,6 +237,7 @@ DEPENDENCIES
   make_flaggable!
   omniauth-facebook
   paperclip
+  paperclip-dropbox
   pg
   puma
   rails (= 4.0.2)
