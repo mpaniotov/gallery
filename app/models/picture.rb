@@ -4,6 +4,7 @@ class Picture < ActiveRecord::Base
   has_many :comments
 
   has_attached_file :photo,
+                    :styles => { :small => "128x128>" },
                     :storage => :dropbox,
                     :dropbox_credentials => Rails.root.join("config/dropbox.yml")
 
