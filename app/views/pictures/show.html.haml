@@ -22,7 +22,9 @@
               .time
                 = time_ago_in_words comment.created_at
                 ago
-
+                .comment_edit{:id=>"#{comment.id}"}
+                  =link_to "edit", edit_comment_path(comment.id)
+%span
 %br
 = form_for :comment, url: picture_comments_path(:picture_id=>@picture.id) do |form|
   = form.label 'Your comment here'

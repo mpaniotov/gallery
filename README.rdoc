@@ -1,28 +1,9 @@
-== README
+This is simple ruby gallery application with saving picture to dropbox and Oauth authorization.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App instalation:
+- <tt> bundle install </tt>
+- <tt> rake db:create </tt>
+- <tt> rake db:migrate </tt>
+- <tt> rake upload_img </tt>
+- <tt> rails s </tt>
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

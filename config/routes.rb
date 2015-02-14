@@ -3,6 +3,7 @@ Gallery::Application.routes.draw do
 
   root :to => 'pictures#index'
   match '/categories/:name/:picture_id'=> 'comments#create',to: :show,as: "picture_comments",via: :post
+  resources :comments
   get '/categories/:name/:picture_id'=> 'pictures#show',to: :show, as: "pict"
 
   resources :categories, :only => [:index, :show] do

@@ -12,6 +12,20 @@ class CommentsController < ApplicationController
     redirect_to pict_path(:picture_id=>@picture.id,:redirect=>true)
   end
 
+  def update
+    @comment_update=Comment.find(params[:id])
+    if @comment_update.update(comment_params)
+      render text: 'Success'
+    else
+      render text: 'Something happens'
+    end
+
+  end
+  
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:text)

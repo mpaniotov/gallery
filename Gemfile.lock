@@ -139,6 +139,9 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (1.6.0)
       omniauth-oauth2 (~> 1.1)
+    omniauth-github (1.1.2)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-oauth2 (1.1.2)
       faraday (>= 0.8, < 0.10)
       multi_json (~> 1.3)
@@ -236,6 +239,7 @@ DEPENDENCIES
   less-rails
   make_flaggable!
   omniauth-facebook
+  omniauth-github
   paperclip
   paperclip-dropbox
   pg
